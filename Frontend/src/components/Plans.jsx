@@ -3,7 +3,7 @@ import React from "react";
 export default function Plans() {
 
   const buyPlan = async (priceId) => {
-    const res = await fetch("http://localhost:3000/create-checkout-session", {
+    const res = await fetch("https://stripe-payment-fvi5.vercel.app/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export default function Plans() {
         <div style={styles.card}>
           <h2>🥈 Silver</h2>
           <p>Basic features</p>
-          <h3>$10</h3>
+          <h3>$50</h3>
           <button
             style={styles.btn}
             onClick={() => buyPlan("price_1Tkiuy8iWZmuqqSYKlx200KF")}
@@ -41,7 +41,7 @@ export default function Plans() {
         <div style={styles.card}>
           <h2>⭐ Standard</h2>
           <p>Most popular plan</p>
-          <h3>$20</h3>
+          <h3>$100</h3>
           <button
             style={styles.btn}
             onClick={() => buyPlan("price_1TkivI8iWZmuqqSY9kYl3FlO")}
@@ -54,7 +54,7 @@ export default function Plans() {
         <div style={styles.card}>
           <h2>💎 Premium</h2>
           <p>All features unlocked</p>
-          <h3>$30</h3>
+          <h3>$200</h3>
           <button
             style={styles.btn}
             onClick={() => buyPlan("price_1TkivV8iWZmuqqSYU7wzoWa7")}
